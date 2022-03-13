@@ -8,38 +8,57 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@300&display=swap">
     </head>
-    <body>
+
+    <body>    
         <header>
             <div class="cabecalho">
                 <h1>Top 5 Animes</h1>
             </div>
         </header>
+
         <main>
-            <img src="imagens/one-piece.jpg" alt="imagem do anime One Piece" class="imagens-anime onepiece" width="250px" height="200px">
-            <p class="sobre-onepiece" hidden>One Piece conta as aventuras de Monkey D. Luffy, um jovem cujo corpo ganhou as propriedades de borracha após ter comido uma fruta do diabo acidentalmente. Com sua tripulação, os Piratas do Chapéu de Palha, Luffy explora a Grand Line em busca do tesouro mais procurado do mundo, o "One Piece", a fim de se tornar o próximo Rei dos Piratas.</p>
-            <iframe class="video-onepiece" hidden width="560" height="315" src="https://www.youtube.com/embed/dM7x1PNZDo0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="principal">
+                <section class="areaImagens">
+                    <div class="carrossel">
+                        <div class="containerImagens">
+                            <img src="imagens/one-piece.jpg" alt="imagem do anime One Piece" class="imagens-anime onepiece">                                                   
+                            <img src="imagens/naruto.jpg" alt="imagem do anime Naruto" class="imagens-anime naruto">
+                            <img src="imagens/hunter.jpg" alt="imagem do anime Hunter x Hunter" class="imagens-anime hunter">
+                            <img src="imagens/demon-slayer.jpg" alt="imagem do anime Demon Slayer" class="imagens-anime demonslayer">
+                            <img src="imagens/boku.jpg" alt="imagem do Boku no hero academia" class="imagens-anime boku">
+                        </div>
+                    </div>
+                </section>
 
-            <img src="imagens/naruto.jpg" alt="imagem do anime Naruto" class="imagens-anime naruto" width="250px" height="200px">
-            <p class="sobre-naruto" hidden>Naruto conta a história de Naruto Uzumaki, um jovem ninja que constantemente procura por reconhecimento e sonha em se tornar Hokage, o ninja líder de sua vila.</p>
-            <iframe class="video-naruto" hidden width="560" height="315" src="https://www.youtube.com/embed/xjBTNbEXbAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <section class="areaTextos">
+                    <div class="sobre">
+                        <p class="descricao sobre-onepiece" hidden>One Piece conta as aventuras de Monkey D. Luffy, um jovem cujo corpo ganhou as propriedades de borracha após ter comido uma fruta do diabo acidentalmente. Com sua tripulação, os Piratas do Chapéu de Palha, Luffy explora a Grand Line em busca do tesouro mais procurado do mundo, o "One Piece", a fim de se tornar o próximo Rei dos Piratas.<a href="https://pt.wikipedia.org/wiki/One_Piece" target="_blank"> Veja mais...</a></p>                                                     
 
-            <img src="imagens/hunter.jpg" alt="imagem do anime Hunter x Hunter" class="imagens-anime hunter" width="250px" height="200px">
-            <p class="sobre-hunter" hidden>A história tem como protagonista Gon Freecss, um menino de 12 anos que quer encontrar o seu pai a todo o custo, então ele decide se tornar um "Hunter", assim como ele, e de alguma forma encontrar o seu paradeiro. À medida que a história avança, Gon faz amizade com outros três Hunters aspirantes: Leorio, Kurapika e Killua, que o acompanham em suas aventuras.</p>
-            <iframe class="video-hunter" hidden width="560" height="315" src="https://www.youtube.com/embed/faqmNf_fZlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="descricao sobre-naruto" hidden>Naruto conta a história de Naruto Uzumaki, um jovem ninja que constantemente procura por reconhecimento e sonha em se tornar Hokage, o ninja líder de sua vila.<a href="https://pt.wikipedia.org/wiki/Naruto" target="_blank"> Veja mais...</a></p>                    
 
-            <img src="imagens/demon-slayer.jpg" alt="imagem do anime Demon Slayer" class="imagens-anime demonslayer" width="250px" height="200px">
-            <p class="sobre-demonslayer" hidden>A história gira ao entorno de Tanjirō Kamado, um garoto bondoso e inteligente que vive junto com sua mãe e seus irmãos. Certo dia, ao voltar para casa, Tanjiro descobre que toda sua família foi atacada por onis, sendo que uma de suas irmãs, Nezuko, é a única que sobreviveu ao ataque. Nezuko então passa a ser um oni. Tanjirō decide então se tornar um caçador de onis, e com a ajuda de Nezuko, passa a sair em jornadas pelo Japão a fim de impedir que a mesma tragédia que afetou sua família aconteça com outras pessoas, enquanto que ele busca uma maneira de tornar Nezuko humana novamente.</p>
-            <iframe class="video-demonslayer" hidden width="560" height="315" src="https://www.youtube.com/embed/tJxCxCWksOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="descricao sobre-hunter" hidden>A história tem como protagonista Gon Freecss, um menino de 12 anos que quer encontrar o seu pai a todo o custo, então ele decide se tornar um "Hunter", assim como ele, e de alguma forma encontrar o seu paradeiro. À medida que a história avança, Gon faz amizade com outros três Hunters aspirantes: Leorio, Kurapika e Killua, que o acompanham em suas aventuras.<a href="https://pt.wikipedia.org/wiki/Hunter_%C3%97_Hunter" target="_blank"> Veja mais...</a></p>
 
-            <img src="imagens/boku.jpg" alt="imagem do Boku no hero academia" class="imagens-anime boku" width="250px" height="200px">
-            <p class="sobre-boku" hidden>A história segue Izuku Midoriya, um menino que nasceu sem individualidade em mundo que é normal tê-las, mas mesmo assim sonha em se tornar um super-herói. Após ajudar o maior herói do mundo, que fica fraco depois de um tempo por causa de um ferimento, a capturar um vilão, este compartilha os seus poderes, o One for All, com Izuku depois de reconhecer o seu valor e o ajuda a se matricular em uma escola para heróis em formação.</p>
-            <iframe class="video-boku" hidden width="560" height="315" src="https://www.youtube.com/embed/L1FdEBTJXus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <p class="descricao sobre-demonslayer" hidden>A história gira ao entorno de Tanjirō Kamado, um garoto bondoso e inteligente que vive junto com sua mãe e seus irmãos. Certo dia, ao voltar para casa, Tanjiro descobre que toda sua família foi atacada por onis, sua irmã Nezuko, é a única que sobreviveu ao ataque. Nezuko então passa a ser um oni. Tanjirō decide se tornar um caçador de onis, e com a ajuda de Nezuko, passa a sair em jornadas pelo Japão a fim de impedir que a mesma tragédia que afetou sua família aconteça com outras pessoas, enquanto que ele busca uma maneira de tornar Nezuko humana novamente.<a href="https://pt.wikipedia.org/wiki/Kimetsu_no_Yaiba" target="_blank"> Veja mais...</a></p>                    
+
+                        <p class="descricao sobre-boku" hidden>A história segue Izuku Midoriya, um menino que nasceu sem individualidade em mundo que é normal tê-las, mas mesmo assim sonha em se tornar um super-herói. Após ajudar o maior herói do mundo, que fica fraco depois de um tempo por causa de um ferimento, a capturar um vilão, este compartilha os seus poderes, o One for All, com Izuku depois de reconhecer o seu valor e o ajuda a se matricular em uma escola para heróis em formação.<a href="https://pt.wikipedia.org/wiki/Boku_no_Hero_Academia" target="_blank"> Veja mais...</a></p>           
+                    </div>        
+                </section>
+
+                <section class="areaVideos">
+                    <iframe class="videos video-onepiece" hidden  width="560" height="315" src="https://www.youtube.com/embed/Oo52vQyAR6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="videos video-naruto" hidden width="560" height="315" src="https://www.youtube.com/embed/xjBTNbEXbAA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="videos video-hunter" hidden width="560" height="315" src="https://www.youtube.com/embed/faqmNf_fZlE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="videos video-demonslayer" hidden width="560" height="315" src="https://www.youtube.com/embed/tJxCxCWksOY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="videos video-boku" hidden width="560" height="315" src="https://www.youtube.com/embed/L1FdEBTJXus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </section> 
+            </div>
         </main>
+
         <footer>
             <div class="rodape">
-                <h2>&copy; Copyright - Eu mesmo</h2>
+                <h2>&copy; Copyright - Top animes</h2>
             </div>
         </footer>
 
