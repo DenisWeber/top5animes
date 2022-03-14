@@ -4,9 +4,11 @@ const containerImagens = document.querySelector('.containerImagens');
 const descricaoAnimes = document.querySelectorAll('.descricao');
 const botaoVoltar = document.querySelector('.voltar');
 const botaoAvancar = document.querySelector('.avancar');
+let larguraTela = window.innerWidth;
 
 let indice = 0;
 let intervalo = setInterval(carrossel, 2500);
+  
 
 //função responsável pelo carrossel
 function carrossel(){
@@ -17,28 +19,29 @@ function carrossel(){
         indice = 0;
     }
 
-    retornarCarrossel();
+    retornarCarrossel(larguraTela);
 }
 
 //retorna para a primeira imagem do carrossel
-function retornarCarrossel() {
-    containerImagens.style.transform = `translateX(${-indice * 560}px)`;
-}
+function retornarCarrossel(largura) {
 
-//zera o intervalo e depois indica que o intervalo volta a ter 2,5 segundos
-function resetarIntervalo() {
-    clearInterval(intervalo);
-    intervalo = setInterval(carrossel, 2500);
+    if (largura < 1366){
+    
+    containerImagens.style.transform = `translateX(${-indice * larguraTela}px)`; 
+    }
+    else {
+    containerImagens.style.transform = `translateX(${-indice * 560}px)`;
+    }
 }
 
 //retrocede uma imagem no carrossel
 function voltarSlide() {
     if (indice > 0 && indice <= imagensAnimes.length - 1){
         indice--;
-        retornarCarrossel();
+        retornarCarrossel(larguraTela);
     }
     else {
-        containerImagens.style.transform = `translateX(${-(imagensAnimes.length - 1) * 560}px)`;
+        containerImagens.style.transform = `translateX(${-(imagensAnimes.length - 1) * larguraTela}px)`;
         indice = imagensAnimes.length - 1;
     }
 
@@ -53,7 +56,13 @@ function proximoSlide() {
         indice = 0;
         }
 
-    retornarCarrossel();   
+    retornarCarrossel(larguraTela);   
+}
+
+//zera o intervalo e depois indica que o intervalo volta a ter 2,5 segundos
+function resetarIntervalo() {
+    clearInterval(intervalo);
+    intervalo = setInterval(carrossel, 2500);
 }
 
 
@@ -90,4 +99,9 @@ botaoAvancar.addEventListener('click', function(){
 botaoVoltar.addEventListener('click', function(){
     resetarIntervalo();
     voltarSlide();
+})
+
+window.addEventListener('resize', function () {
+    //var altura = window.innerHeight;
+    larguraTela = window.innerWidth;
 })
