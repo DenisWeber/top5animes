@@ -4,6 +4,7 @@ const containerImagens = document.querySelector('.containerImagens');
 const descricaoAnimes = document.querySelectorAll('.descricao');
 const botaoVoltar = document.querySelector('.voltar');
 const botaoAvancar = document.querySelector('.avancar');
+
 let indice = 0;
 let intervalo = setInterval(carrossel, 2500);
 
@@ -16,20 +17,25 @@ function carrossel(){
         indice = 0;
     }
 
-    containerImagens.style.transform = `translateX(${-indice * 560}px)`;  
+    retornarCarrossel();
 }
 
-//função que determina um intervalo para a execução da função 'carrossel'
+//retorna para a primeira imagem do carrossel
+function retornarCarrossel() {
+    containerImagens.style.transform = `translateX(${-indice * 560}px)`;
+}
 
+//zera o intervalo e depois indica que o intervalo volta a ter 2,5 segundos
 function resetarIntervalo() {
     clearInterval(intervalo);
     intervalo = setInterval(carrossel, 2500);
 }
 
+//retrocede uma imagem no carrossel
 function voltarSlide() {
     if (indice > 0 && indice <= imagensAnimes.length - 1){
         indice--;
-        containerImagens.style.transform = `translateX(${-indice * 560}px)`;
+        retornarCarrossel();
     }
     else {
         containerImagens.style.transform = `translateX(${-(imagensAnimes.length - 1) * 560}px)`;
@@ -37,15 +43,17 @@ function voltarSlide() {
     }
 
 }
+
+//avança uma imagem do carrossel
 function proximoSlide() {
     if (indice < imagensAnimes.length - 1){
         indice++;
         }
     else {
-            indice = 0;
+        indice = 0;
         }
 
-    containerImagens.style.transform = `translateX(${-indice * 560}px)`;    
+    retornarCarrossel();   
 }
 
 
@@ -74,6 +82,7 @@ for (let i = 0; i < imagensAnimes.length; i++){
     })
 }
 
+//Recebem o evento de click e executa as funções
 botaoAvancar.addEventListener('click', function(){
     resetarIntervalo();
     proximoSlide();
