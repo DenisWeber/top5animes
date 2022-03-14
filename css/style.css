@@ -11,7 +11,7 @@ body {
 }
 
 .principal {
-    height: 100vh;
+    min-height: 100vh;
     margin: 20px 0 50px 0;
 }
 
@@ -27,10 +27,6 @@ header h1 {
     padding: 20px;
 }
 
-.areaImagens {
-    position: relative;
-
-}
 .carrossel {
     position: relative;
     box-shadow: 2px 2px 4px gray;
@@ -82,11 +78,16 @@ input {
     right: 1%;
 }
 
-.areaImagens, .areaVideos {
+.areaImagens {
+    margin: auto;
+    width: 560px;
+    position: relative;
+}
+
+.areaVideos {
     margin: auto;
     width: 560px;
 }
-
 .videos {
     border-radius: 4px;
 }
@@ -108,6 +109,7 @@ a {
 }
 
 .rodape {
+    display: block;
     background: #880000;
     color: #FFFFFF;
     width: 100%;
