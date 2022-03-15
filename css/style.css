@@ -60,7 +60,7 @@ body {
 }
 
 .areaImagens input {
-    border-radius: 20px;
+    border-radius: 50%;
     text-align: center;
     width: 40px;
     height: 40px;
