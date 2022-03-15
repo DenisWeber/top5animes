@@ -28,7 +28,7 @@ body {
 /* Imagens*/
 .principal {
     min-height: 100vh;
-    margin: 20px 0 50px 0;
+    margin: 20px 0;
 }
 
 .areaImagens {
@@ -43,6 +43,7 @@ body {
 
 .imagens-anime {
     width: 100%;
+    flex-shrink: 0;
 }
 
 .areaImagens p {
@@ -105,9 +106,7 @@ body {
 }
 
 .areaTextos a {
-    text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    color: blue;
 }
 
 a:visited {
