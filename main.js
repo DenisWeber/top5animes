@@ -25,7 +25,7 @@ function carrossel(){
 //retorna para a primeira imagem do carrossel
 function retornarCarrossel(largura) {
 
-    if (largura < 1366){
+    if (largura < 560){
     
     containerImagens.style.transform = `translateX(${-indice * larguraTela}px)`; 
     }
@@ -41,8 +41,14 @@ function voltarSlide() {
         retornarCarrossel(larguraTela);
     }
     else {
+        if (larguraTela > 560){
+            containerImagens.style.transform = `translateX(${-(imagensAnimes.length - 1) * 560}px)`;
+            indice = imagensAnimes.length - 1;
+        }
+        else {
         containerImagens.style.transform = `translateX(${-(imagensAnimes.length - 1) * larguraTela}px)`;
         indice = imagensAnimes.length - 1;
+        }
     }
 
 }
@@ -102,6 +108,5 @@ botaoVoltar.addEventListener('click', function(){
 })
 
 window.addEventListener('resize', function () {
-    //var altura = window.innerHeight;
     larguraTela = window.innerWidth;
 })
