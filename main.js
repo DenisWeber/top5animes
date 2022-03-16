@@ -1,6 +1,7 @@
 const imagensAnimes = document.querySelectorAll('.imagens-anime');
-const videosAnimes = document.querySelectorAll('.videos');
+const videosAnimes = document.querySelector('.videos');
 const containerImagens = document.querySelector('.containerImagens');
+const tituloAnimes = document.querySelectorAll('.titulo');
 const descricaoAnimes = document.querySelectorAll('.descricao');
 const botaoVoltar = document.querySelector('.voltar');
 const botaoAvancar = document.querySelector('.avancar');
@@ -74,15 +75,40 @@ function resetarIntervalo() {
 
 //recebe como parametro o nome do anime que irá exibir o vídeo e a descrição
 function exibirInformacoes(nomeAnime){
+
+    switch (nomeAnime){
+        case 'onepiece':
+            videosAnimes.setAttribute('src', 'https://www.youtube.com/embed/Oo52vQyAR6w');
+            break;
+        case 'naruto':
+            videosAnimes.setAttribute('src', 'https://www.youtube.com/embed/xjBTNbEXbAA');
+            break;
+        case 'hunter':
+            videosAnimes.setAttribute('src', 'https://www.youtube.com/embed/faqmNf_fZlE');
+            break;
+        case 'demonslayer':
+            videosAnimes.setAttribute('src', 'https://www.youtube.com/embed/tJxCxCWksOY');
+            break;
+        case 'boku':
+            videosAnimes.setAttribute('src', 'https://www.youtube.com/embed/L1FdEBTJXus');
+            break;
+        default:
+            videosAnimes.setAttribute('src', '');
+            break;
+    }
+    
+    document.querySelector(`.titulo-${nomeAnime}`).removeAttribute('hidden');
     document.querySelector(`.sobre-${nomeAnime}`).removeAttribute('hidden');
-    document.querySelector(`.video-${nomeAnime}`).removeAttribute('hidden');
+    videosAnimes.removeAttribute('hidden');
+    
 }
 
 //oculta a descrição e vídeo de todos os animes
 function ocultarInformacoes() {
     for (let i = 0; i < imagensAnimes.length; i++){
         descricaoAnimes[i].setAttribute('hidden', 'hidden');
-        videosAnimes[i].setAttribute('hidden', 'hidden');
+        tituloAnimes[i].setAttribute('hidden', 'hidden');
+        videosAnimes.setAttribute('hidden', 'hidden');
     }
 }
 
